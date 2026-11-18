@@ -1,7 +1,8 @@
 -- =============================================================================
 -- Motor DPM · Tablas de referencia por template: clave (framework_cd, tmplt_cd)
 -- El template se escribe igual que en la pestaña Catalog (sin la letra del framework).
--- Valores: perímetros = FRP_TPMAPA_MAPEAMENTO de legacy (65 filas, 18/11/2026);
+-- Valores: perímetros = FRP_TPMAPA_MAPEAMENTO de legacy (65 filas, 18/11/2026)
+-- + 4 subtemplates de FET (04.02.1, 04.02.2, 04.03.1, 04.04.1) con el perímetro de su padre;
 -- país = FRP_ZAXIX_MAPA_COM_PAIS (valores de arranque del notebook de migración);
 -- tipos = los de FET (dos de legacy + las dos tablas nuevas de FINREP).
 -- =============================================================================
@@ -99,8 +100,12 @@ USING (
     , ('FINREP', '03.00', 'PRUDENCIAL')
     , ('FINREP', '04.01', 'PRUDENCIAL')
     , ('FINREP', '04.02', 'PRUDENCIAL')
+    , ('FINREP', '04.02.1', 'PRUDENCIAL')
+    , ('FINREP', '04.02.2', 'PRUDENCIAL')
     , ('FINREP', '04.03', 'PRUDENCIAL')
+    , ('FINREP', '04.03.1', 'PRUDENCIAL')
     , ('FINREP', '04.04', 'PRUDENCIAL')
+    , ('FINREP', '04.04.1', 'PRUDENCIAL')
     , ('FINREP', '04.05', 'PRUDENCIAL')
     , ('FINREP', '05.00', 'PRUDENCIAL')
     , ('FINREP', '06.00', 'PRUDENCIAL')
