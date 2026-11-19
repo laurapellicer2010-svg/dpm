@@ -1,7 +1,7 @@
 {
   "batch": {
     "name": "DE_DP_NB_LGL_REG_DPM_EXEC_REQ",
-    "description": "DPM engine: runs the calculations requested with the DataLoader (one run per row of the request file). Triggered by the load of the request file.",
+    "description": "DPM engine: runs the calculations requested with the DataLoader (one run per row of the request file). Triggered by the DataLoader of the request file when its load ends.",
     "enabled": 1,
     "stages": [
       {
@@ -21,11 +21,6 @@
             "params": []
           }
         ]
-      }
-    ],
-    "parentBatches": [
-      {
-        "batchName": "raw_dpm_exec_req"
       }
     ],
     "properties": [

@@ -1,7 +1,7 @@
 {
   "batch": {
     "name": "DE_DP_NB_LGL_REG_DPM_PARAM_LOAD",
-    "description": "DPM engine: validates a parameterisation file uploaded with the DataLoader and, if it is valid, makes it the current parameterisation of its framework. Triggered by the load of the four tabs of the file.",
+    "description": "DPM engine: validates a parameterisation file uploaded with the DataLoader and, if it is valid, makes it the current parameterisation of its framework. Triggered by the DataLoader of each tab of the file when its load ends.",
     "enabled": 1,
     "stages": [
       {
@@ -21,20 +21,6 @@
             "params": []
           }
         ]
-      }
-    ],
-    "parentBatches": [
-      {
-        "batchName": "raw_dpm_param_datapoint"
-      },
-      {
-        "batchName": "raw_dpm_param_fltr"
-      },
-      {
-        "batchName": "raw_dpm_param_ctlg"
-      },
-      {
-        "batchName": "raw_dpm_param_src_tbl"
       }
     ],
     "properties": [
