@@ -38,7 +38,7 @@
       },
       {
         "BatchPropertyName": "Identification.DataScope",
-        "BatchPropertyValue": "<<DATA_SCOPE>>"
+        "BatchPropertyValue": "DPM"
       },
       {
         "BatchPropertyName": "Scheduling.TriggerType",

@@ -27,7 +27,7 @@
       { "BatchPropertyName": "Identification.Owner", "BatchPropertyValue": "<<OWNER_NAME>>" },
       { "BatchPropertyName": "Identification.OwnerEmail", "BatchPropertyValue": "<<OWNER_EMAIL>>" },
       { "BatchPropertyName": "Identification.SupportTeam", "BatchPropertyValue": "<<SUPPORT_TEAM>>" },
-      { "BatchPropertyName": "Identification.DataScope", "BatchPropertyValue": "<<DATA_SCOPE>>" }
+      { "BatchPropertyName": "Identification.DataScope", "BatchPropertyValue": "DPM" }
     ]
   }
 }
