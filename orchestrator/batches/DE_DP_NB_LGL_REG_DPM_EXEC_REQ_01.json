@@ -1,0 +1,54 @@
+{
+  "batch": {
+    "name": "DE_DP_NB_LGL_REG_DPM_EXEC_REQ",
+    "description": "DPM engine: runs the calculations requested with the DataLoader (one run per row of the request file). Triggered by the load of the request file.",
+    "enabled": 1,
+    "stages": [
+      {
+        "name": "DPM_EXEC_REQ",
+        "description": "Calculation of the pending requests",
+        "enabled": 1,
+        "pipelines": [
+          {
+            "name": "DE_ENR_NB_LGL_REG_DPM_REQUEST_DISPATCHER",
+            "workspaceId": "<<WORKSPACE_ID>>",
+            "workspaceName": "DP FET Legal and Regulatory Reporting",
+            "artifactId": "<<NOTEBOOK_ID>>",
+            "artifactName": "DE_ENR_NB_LGL_REG_DPM_REQUEST_DISPATCHER",
+            "artifactDescription": "Runs the calculations requested with the DataLoader",
+            "artifactType": "Notebook",
+            "enabled": 1,
+            "params": []
+          }
+        ]
+      }
+    ],
+    "parentBatches": [
+      {
+        "batchName": "raw_dpm_exec_req"
+      }
+    ],
+    "properties": [
+      {
+        "BatchPropertyName": "Identification.Owner",
+        "BatchPropertyValue": "<<OWNER_NAME>>"
+      },
+      {
+        "BatchPropertyName": "Identification.OwnerEmail",
+        "BatchPropertyValue": "<<OWNER_EMAIL>>"
+      },
+      {
+        "BatchPropertyName": "Identification.SupportTeam",
+        "BatchPropertyValue": "<<SUPPORT_TEAM>>"
+      },
+      {
+        "BatchPropertyName": "Identification.DataScope",
+        "BatchPropertyValue": "<<DATA_SCOPE>>"
+      },
+      {
+        "BatchPropertyName": "Scheduling.TriggerType",
+        "BatchPropertyValue": "EVT"
+      }
+    ]
+  }
+}

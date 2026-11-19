@@ -1,0 +1,63 @@
+{
+  "batch": {
+    "name": "DE_DP_NB_LGL_REG_DPM_PARAM_LOAD",
+    "description": "DPM engine: validates a parameterisation file uploaded with the DataLoader and, if it is valid, makes it the current parameterisation of its framework. Triggered by the load of the four tabs of the file.",
+    "enabled": 1,
+    "stages": [
+      {
+        "name": "DPM_PARAM_LOAD",
+        "description": "Validation and load of the parameterisation",
+        "enabled": 1,
+        "pipelines": [
+          {
+            "name": "DE_ENR_NB_LGL_REG_DPM_PARAM_LOAD",
+            "workspaceId": "<<WORKSPACE_ID>>",
+            "workspaceName": "DP FET Legal and Regulatory Reporting",
+            "artifactId": "<<NOTEBOOK_ID>>",
+            "artifactName": "DE_ENR_NB_LGL_REG_DPM_PARAM_LOAD",
+            "artifactDescription": "Makes a parameterisation file uploaded with the DataLoader the current parameterisation of its framework, only if it is valid",
+            "artifactType": "Notebook",
+            "enabled": 1,
+            "params": []
+          }
+        ]
+      }
+    ],
+    "parentBatches": [
+      {
+        "batchName": "raw_dpm_param_datapoint"
+      },
+      {
+        "batchName": "raw_dpm_param_fltr"
+      },
+      {
+        "batchName": "raw_dpm_param_ctlg"
+      },
+      {
+        "batchName": "raw_dpm_param_src_tbl"
+      }
+    ],
+    "properties": [
+      {
+        "BatchPropertyName": "Identification.Owner",
+        "BatchPropertyValue": "<<OWNER_NAME>>"
+      },
+      {
+        "BatchPropertyName": "Identification.OwnerEmail",
+        "BatchPropertyValue": "<<OWNER_EMAIL>>"
+      },
+      {
+        "BatchPropertyName": "Identification.SupportTeam",
+        "BatchPropertyValue": "<<SUPPORT_TEAM>>"
+      },
+      {
+        "BatchPropertyName": "Identification.DataScope",
+        "BatchPropertyValue": "<<DATA_SCOPE>>"
+      },
+      {
+        "BatchPropertyName": "Scheduling.TriggerType",
+        "BatchPropertyValue": "EVT"
+      }
+    ]
+  }
+}
