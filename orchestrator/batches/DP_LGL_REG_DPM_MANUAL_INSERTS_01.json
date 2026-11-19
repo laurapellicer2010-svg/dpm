@@ -1,0 +1,33 @@
+{
+  "batch": {
+    "name": "DP_LGL_REG_DPM_MANUAL_INSERTS",
+    "description": "DPM engine reference data: consolidation reference tables and issue catalogue. Run manually after each deployment of the engine.",
+    "enabled": 1,
+    "stages": [
+      {
+        "name": "DPM_MANUAL_INSERTS",
+        "description": "Reference tables by framework and template, datapoint type by source table and issue catalogue",
+        "enabled": 1,
+        "pipelines": [
+          {
+            "name": "DE_DP_NB_LGL_REG_DPM_MANUAL_INSERTS",
+            "workspaceId": "<<WORKSPACE_ID>>",
+            "workspaceName": "DP FET Legal and Regulatory Reporting",
+            "artifactId": "<<NOTEBOOK_ID>>",
+            "artifactName": "DE_DP_NB_LGL_REG_DPM_MANUAL_INSERTS",
+            "artifactDescription": "Reference data of the DPM engine: consolidation reference tables and issue catalogue",
+            "artifactType": "Notebook",
+            "enabled": 1,
+            "params": []
+          }
+        ]
+      }
+    ],
+    "properties": [
+      { "BatchPropertyName": "Identification.Owner", "BatchPropertyValue": "<<OWNER_NAME>>" },
+      { "BatchPropertyName": "Identification.OwnerEmail", "BatchPropertyValue": "<<OWNER_EMAIL>>" },
+      { "BatchPropertyName": "Identification.SupportTeam", "BatchPropertyValue": "<<SUPPORT_TEAM>>" },
+      { "BatchPropertyName": "Identification.DataScope", "BatchPropertyValue": "<<DATA_SCOPE>>" }
+    ]
+  }
+}
